@@ -29,19 +29,19 @@ app.get("/umma-abah", (req, res) =>
   res.status(200).send("sehat sehat semua abati amati")
 );
 
-app.post("/payments/create", async (req, res) => {
-  const total = req.query.total;
-  console.log(`Request payment amount >>> ${total}`);
+// app.post("/payments/create", async (req, res) => {
+//   const total = req.query.total;
+//   console.log(`Request payment amount >>> ${total}`);
 
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: total,
-    currency: "usd",
-  });
+//   const paymentIntent = await stripe.paymentIntents.create({
+//     amount: total,
+//     currency: "usd",
+//   });
 
-  res.status(201).send({
-    clientSecret: paymentIntent.client_secret,
-  });
-});
+//   res.status(201).send({
+//     clientSecret: paymentIntent.client_secret,
+//   });
+// });
 
 // Listen
 exports.api = functions.https.onRequest(app);
