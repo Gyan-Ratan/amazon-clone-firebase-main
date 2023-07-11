@@ -39,7 +39,7 @@ app.get("/umma-abah", (req, res) =>
 //   });
 
 //   res.status(201).send({
-//     clientSecret: paymentIntent.client_secret,
+//     clientSecret: paymentIntent.client_secret,fire
 //   });
 // });
 
